@@ -13,26 +13,25 @@ def download_and_unzip(parameters: Dict[str, Any])  -> Tuple[pd.DataFrame, pd.Da
     print(f"generating {year_month}")
 
     response = requests.get(f"https://dados.cvm.gov.br/dados/FI/DOC/CDA/DADOS/cda_fi_{year_month}.zip")
-    filename = f"cda_fi_{year_month}"
+    filename = f"cda_fi_{year_month}.zip"
     
     if open(filename, "wb").write(response.content):
         print('files downloaded')
 
-    with zipfile.ZipFile(filename, 'r') as zip_ref:
-        path = r"..\..\..\data\01_raw"
-        zip_ref.extractall(path)
-        print('files unzipped')
-    
-    cda_fi_BLC_1 = pd.read_csv(fr'..\..\..\data\01_raw\cda_fi_BLC_1_{year_month}.csv', encoding="latin-1", sep = ';', low_memory=False)
-    cda_fi_BLC_2 = pd.read_csv(fr'..\..\..\data\01_raw\cda_fi_BLC_2_{year_month}.csv', encoding="latin-1", sep = ';', low_memory=False)
-    cda_fi_BLC_3 = pd.read_csv(fr'..\..\..\data\01_raw\cda_fi_BLC_3_{year_month}.csv', encoding="latin-1", sep = ';', low_memory=False)
-    cda_fi_BLC_4 = pd.read_csv(fr'..\..\..\data\01_raw\cda_fi_BLC_4_{year_month}.csv', encoding="latin-1", sep = ';', low_memory=False)
-    cda_fi_BLC_5 = pd.read_csv(fr'..\..\..\data\01_raw\cda_fi_BLC_5_{year_month}.csv', encoding="latin-1", sep = ';', low_memory=False)
-    cda_fi_BLC_6 = pd.read_csv(fr'..\..\..\data\01_raw\cda_fi_BLC_6_{year_month}.csv', encoding="latin-1", sep = ';', low_memory=False)
-    cda_fi_BLC_7 = pd.read_csv(fr'..\..\..\data\01_raw\cda_fi_BLC_7_{year_month}.csv', encoding="latin-1", sep = ';', low_memory=False)
-    cda_fi_BLC_8 = pd.read_csv(fr'..\..\..\data\01_raw\cda_fi_BLC_8_{year_month}.csv', encoding="latin-1", sep = ';', low_memory=False)
-    cda_fi_CONFID = pd.read_csv(fr'..\..\..\data\01_raw\cda_fi_CONFID_{year_month}.csv', encoding="latin-1", sep = ';', low_memory=False)
-    cda_fi_PL = pd.read_csv(fr'..\..\..\data\01_raw\cda_fi_PL_{year_month}.csv', encoding="latin-1", sep = ';', low_memory=False)
+    path = r""
+    zipfile.ZipFile(filename, 'r').extractall(path)
+    print('files unzipped')
+
+    cda_fi_BLC_1 = pd.read_csv(fr"cda_fi_BLC_1_{year_month}.csv", encoding="latin-1", sep = ';', low_memory=False)
+    cda_fi_BLC_2 = pd.read_csv(fr"cda_fi_BLC_2_{year_month}.csv", encoding="latin-1", sep = ';', low_memory=False)
+    cda_fi_BLC_3 = pd.read_csv(fr'cda_fi_BLC_3_{year_month}.csv', encoding="latin-1", sep = ';', low_memory=False)
+    cda_fi_BLC_4 = pd.read_csv(fr'cda_fi_BLC_4_{year_month}.csv', encoding="latin-1", sep = ';', low_memory=False)
+    cda_fi_BLC_5 = pd.read_csv(fr'cda_fi_BLC_5_{year_month}.csv', encoding="latin-1", sep = ';', low_memory=False)
+    cda_fi_BLC_6 = pd.read_csv(fr'cda_fi_BLC_6_{year_month}.csv', encoding="latin-1", sep = ';', low_memory=False)
+    cda_fi_BLC_7 = pd.read_csv(fr'cda_fi_BLC_7_{year_month}.csv', encoding="latin-1", sep = ';', low_memory=False)
+    cda_fi_BLC_8 = pd.read_csv(fr'cda_fi_BLC_8_{year_month}.csv', encoding="latin-1", sep = ';', low_memory=False)
+    cda_fi_CONFID = pd.read_csv(fr'cda_fi_CONFID_{year_month}.csv', encoding="latin-1", sep = ';', low_memory=False)
+    cda_fi_PL = pd.read_csv(fr'cda_fi_PL_{year_month}.csv', encoding="latin-1", sep = ';', low_memory=False)
 
     cda_fi_BLC_1['BLOCO_REP'] = 'TÍTULOS PÚBLICOS DO SELIC'
     cda_fi_BLC_2['BLOCO_REP'] = 'COTAS DE FUNDOS DE INVESTIMENTO'
