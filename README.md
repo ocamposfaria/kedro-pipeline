@@ -1,8 +1,13 @@
 # kedro-pipeline
 
-Esse repositório contém uma aplicação de um pipeline de extração de Composição e Diversificação de Aplicações (CDAs) de Fundos de Investimento.
+Esse repositório contém uma aplicação Kedro que executa um pipeline de extração dos dados. O projeto contém nodes que executam as seguintes tarefas:
 
-Confira um preview do pipeline:  
+- Download e extração dos arquivos para .csv (10 arquivos);
+- Agregação de 8 dos 10 arquivos (semelhante a um UNION ALL);
+- Performance de um OneHotEncoding para os tipos de ativos dos fundos de investimento; e
+- Carregamento num banco PostgreSQL.
 
-![preview](https://github.com/ocamposfaria/kedro-pipeline/blob/main/pipeline_preview_last.jpg?raw=true) :)
+Confira um preview do pipeline:
+
+![preview](https://github.com/ocamposfaria/kedro-pipeline/blob/main/pipeline_preview_last.jpg?raw=true)
 
