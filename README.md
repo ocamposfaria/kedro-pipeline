@@ -9,5 +9,5 @@ Esse repositório contém uma aplicação Kedro que executa um pipeline de extra
 
 Confira um preview do pipeline:
 
-![preview](https://github.com/ocamposfaria/kedro-pipeline/blob/main/pipeline_preview_last.jpg?raw=true)
+![preview](https://github.com/ocamposfaria/kedro-pipeline/blob/main/pipeline_preview.jpg?raw=true)
 
