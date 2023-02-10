@@ -1,6 +1,6 @@
 # kedro-pipeline
 
-Esse repositório contém uma aplicação Kedro que executa um pipeline de ETL de dados. O projeto contém nodes que executam as seguintes tarefas:
+Esse repositório contém uma aplicação Kedro que executa um pipeline de extração e carregamento de dados. O projeto contém nodes que executam as seguintes tarefas:
 
 - Download e extração dos arquivos para .csv (10 arquivos);
 - Agregação de 8 dos 10 arquivos (semelhante a um UNION ALL);
