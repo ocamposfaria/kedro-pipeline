@@ -28,4 +28,4 @@ kedro docker run
 ```
 
 **ATENÇÃO:** a aplicação só irá executar após as credencias serem atualizadas no caminho a seguir!  
-[\data-engineering-pipeline\conf\local\credentials.yml](\data-engineering-pipeline\conf\local\credentials.yml)
+[\data-engineering-pipeline\conf\local\credentials.yml](https://github.com/ocamposfaria/kedro-pipeline/tree/main/data-engineering-pipeline/conf/local)
