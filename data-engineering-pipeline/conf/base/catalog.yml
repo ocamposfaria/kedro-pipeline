@@ -1,4 +1,47 @@
-# Here you can define all your data sets by using simple YAML syntax.
-#
-# Documentation for this file format can be found in "The Data Catalog"
-# Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
+cda_fi_BLC_1:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/cda_fi_BLC_1.csv
+  
+cda_fi_BLC_2:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/cda_fi_BLC_2.csv
+  
+cda_fi_BLC_3:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/cda_fi_BLC_3.csv
+  
+cda_fi_BLC_4:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/cda_fi_BLC_4.csv
+  
+cda_fi_BLC_5:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/cda_fi_BLC_5.csv
+
+cda_fi_BLC_6:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/cda_fi_BLC_6.csv
+  
+cda_fi_BLC_7:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/cda_fi_BLC_7.csv
+  
+cda_fi_BLC_8:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/cda_fi_BLC_8.csv
+
+cda_fi_CONFID:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/cda_fi_CONFID.csv
+
+cda_fi_PL:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/cda_fi_PL.csv
+
+aggregated_file:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/aggregated_file.csv
+
+one_hot_encoded_asset_types:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/one_hot_encoded_asset_types.csv
