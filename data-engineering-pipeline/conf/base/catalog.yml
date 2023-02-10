@@ -45,3 +45,10 @@ aggregated_file:
 one_hot_encoded_asset_types:
   type: pandas.CSVDataSet
   filepath: data/03_primary/one_hot_encoded_asset_types.csv
+
+postgres_table:
+  type: pandas.SQLTableDataSet
+  table_name: kedro_table
+  credentials: postgres
+  save_args:
+    if_exists: replace

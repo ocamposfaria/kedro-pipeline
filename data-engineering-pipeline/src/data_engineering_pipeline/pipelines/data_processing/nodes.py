@@ -82,3 +82,7 @@ def one_hot_encoding_asset_types(df: pd.DataFrame) -> pd.DataFrame:
     df_one_hot = X_new.groupby(['CNPJ_FUNDO', 'DENOM_SOCIAL']).sum().reset_index()
 
     return df_one_hot
+
+def prepare_to_postgresql(df: pd.DataFrame):
+    df = df[['CNPJ_FUNDO', 'QT_POS_FINAL', 'VL_MERC_POS_FINAL', 'TP_ATIVO']]
+    return df

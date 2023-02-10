@@ -4,7 +4,7 @@ generated using Kedro 0.18.4
 """
 
 from kedro.pipeline import Pipeline, node, pipeline
-from .nodes import download_and_unzip, aggregate_files, one_hot_encoding_asset_types
+from .nodes import download_and_unzip, aggregate_files, one_hot_encoding_asset_types, prepare_to_postgresql
 
 def create_pipeline(**kwargs) -> Pipeline:
     return pipeline(
@@ -26,6 +26,12 @@ def create_pipeline(**kwargs) -> Pipeline:
                 inputs="aggregated_file",
                 outputs="one_hot_encoded_asset_types", 
                 name="one_hot_encoding_asset_types"
+            ),
+            node(
+                func=prepare_to_postgresql,
+                inputs="aggregated_file",
+                outputs="postgres_table", 
+                name="export_to_postgresql"
             )
         ]
     )
