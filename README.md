@@ -11,3 +11,20 @@ Confira um preview do pipeline:
 
 ![preview](https://github.com/ocamposfaria/kedro-pipeline/blob/main/pipeline_preview.jpg?raw=true)
 
+A aplicação foi containerizada com Docker. Para executar, é necessário ativar o virtual environment. Para isso, na raiz do cmd:
+
+```
+cd .\env\Scripts\
+.\activate
+cd ..
+cd ..
+```
+
+Em seguida, execute o container:
+
+```
+cd .\data-engineering-pipeline\
+kedro docker run
+```
+
+**ATENÇÃO:** a aplicação só irá executar após as credencias serem atualizadas no caminho (*!*): [\data-engineering-pipeline\conf\local\credentials.yml](\data-engineering-pipeline\conf\local\credentials.yml)
