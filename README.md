@@ -11,7 +11,7 @@ Confira um preview do pipeline:
 
 ![preview](https://github.com/ocamposfaria/kedro-pipeline/blob/main/pipeline_preview.jpg?raw=true)
 
-A aplicação foi containerizada com Docker. Para executar, é necessário ativar o virtual environment. Para isso, na raiz do cmd:
+A aplicação foi containerizada com Docker. Para executá-la, é necessário ativar o virtual environment. Para isso, na raiz do cmd:
 
 ```
 cd .\env\Scripts\
