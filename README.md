@@ -7,10 +7,6 @@ Esse repositório contém uma aplicação Kedro que executa um pipeline de extra
 - Performance de um OneHotEncoding para os tipos de ativos dos fundos de investimento; e
 - Carregamento num banco PostgreSQL.
 
-Confira um preview do pipeline:
-
-![preview](https://github.com/ocamposfaria/kedro-pipeline/blob/main/pipeline_preview.jpg?raw=true)
-
 A aplicação foi containerizada com Docker. Para executá-la, é necessário ativar o virtual environment. Para isso, na raiz do cmd:
 
 ```
