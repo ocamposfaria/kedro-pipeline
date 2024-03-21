@@ -10,18 +10,13 @@ Esse repositório contém uma aplicação Kedro que executa um pipeline de extra
 ![alt text](/pipeline_preview_new.jpg)
 
 
-A aplicação foi containerizada com Docker. Para executá-la, é necessário ativar o virtual environment. Para isso, na raiz do cmd:
+A aplicação foi containerizada utilizando a biblioteca kedro-docker. Para executá-la, é necessário ativar o virtual environment e, em seguida, executar o container.
 
 ```
 cd .\env\Scripts\
 .\activate
 cd ..
 cd ..
-```
-
-Em seguida, execute o container:
-
-```
 cd .\data-engineering-pipeline\
 kedro docker run
 ```
