@@ -7,7 +7,7 @@ Esse repositório contém uma aplicação Kedro que executa um pipeline de extra
 - Performance de um OneHotEncoding para os tipos de ativos dos fundos de investimento; e
 - Carregamento num banco PostgreSQL.
 
-![alt text](/pipeline_preview_new.jpg)
+
 
 
 A aplicação foi containerizada utilizando a biblioteca kedro-docker. Para executá-la, é necessário ativar o virtual environment e, em seguida, executar o container.
